@@ -95,6 +95,13 @@ label {
     text-shadow: 0px 1px 2px rgba(22, 62, 115, 0.3);
     background-color: transparent;
   }
+  &.btn_blue{
+    background-color: #163e73;
+    border-color: #163e73;
+    color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  }
 }
 
 p {
@@ -452,15 +459,22 @@ main{
     &:hover,
     &:focus,
     &:active{
+      .text_block:after{
+        opacity: 1;
+      }
       &:after{
         opacity: 1;
       }
       .title{
-        margin-top: 230px;
+        margin-top: 154px;
         background-color: transparent;
         color: #fff;
         font-size: 29px;
         text-shadow: 0px 1px 2px rgba(22, 62, 115, 0.3);
+      }
+      .price{
+        opacity: 1;
+        visibility: visible;
       }
       .btn{
         opacity: 1;
@@ -485,8 +499,18 @@ main{
     left: 30px;
     z-index: 1;
     text-align: center;
-    width: 500px;
     margin: 0 auto;
+    &:after{
+      content: '';
+      position: absolute;
+      border: 2px solid #fff;
+      top: 0;
+      right: 0;
+      bottom: 26px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.25s ease-out;
+    }
   }
   .title{
     font-family: 'ComfortaaRegular', $font-stack-helvetica;
@@ -499,11 +523,140 @@ main{
     border-radius: 7px;
     background-color: #fff;
     margin: 352px 0 5px;
-    transition: margin-top 0.25s ease-out, background-color 0.25s ease-out;
+    transition: margin-top 0.25s ease-out, background-color 0.15s ease-out;
   }
-  .btn{
+  .price{
+    font-size: 22px;
+    line-height: 1.2em;
+    font-family: 'PoiretOneRegular', $font-stack-helvetica;
+    color: #fff;
     opacity: 0;
     visibility: hidden;
+    margin-bottom: 103px;
     transition: opacity 0.25s ease-out;
   }
+  .btn{
+    color: #163e73;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.25s ease-out;
+  }
+}
+
+.recomended{
+  width: 14.28%;
+  .inner{
+    background: url('../img/recomended_bg.jpg') center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    padding: 110px 0;
+    height: 486px;
+  }
+  .title{
+    color: #222;
+    font-family: 'ComfortaaRegular', $font-stack-helvetica;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 26px 10px;
+  }
+  .btn{
+    width: 163px;
+    margin: 26px 0;
+  }
+}
+
+.item_product{
+  width: 21.43%;
+  .inner_product{
+    box-shadow: 0px 1px 2px 0px rgba(22, 62, 115, 0.3);
+    padding-bottom: 34px;
+    display: inline-block;
+    height: 486px;
+    transition: box-shadow 0.25s ease-out;
+    &:hover,
+    &:focus,
+    &:active{
+      box-shadow: 0px 1px 5px 0px rgba(22, 62, 115, 0.6);
+    }
+  }
+  .img_block{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+  .discount{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #e61566;
+    color: #fff;
+    font-size: 16px;
+    line-height: 58px;
+    letter-spacing: 0.01em;
+    font-family: 'ComfortaaBold', $font-stack-helvetica;
+    text-align: center;
+    top: 20px;
+    right: 20px;
+  }
+  .favorites{
+    border-radius: 50%;
+    background: #fff url('../img/icons/svg/favoirites.svg') center no-repeat; 
+    background-size: 24px;
+    box-shadow: 0px 3px 5px 0px rgba(22, 62, 115, 0.3);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    bottom: 18px;
+    transition: background 0.25s ease-out;
+    &:hover,
+    &:focus,
+    &:active{
+      background: #fff url('../img/icons/svg/hurt_filled.svg') center no-repeat; 
+      background-size: 24px;
+    }
+    &.favorites_on{
+      background: #fff url('../img/icons/svg/favoirite-active.svg') center no-repeat; 
+      background-size: 24px;
+      &:hover,
+      &:focus,
+      &:active{
+        background: #fff url('../img/icons/svg/hurt_filled.svg') center no-repeat; 
+        background-size: 24px;
+      }
+    }
+  }
+  .vendor_code{
+    color: #163e73;
+    font-family: 'PoiretOneRegular', $font-stack-helvetica;
+    font-size: 18px;
+    line-height: 1.2em;
+    padding: 14px 16px 12px;
+  }
+  .price{
+    color: #333;
+    font-family: 'ComfortaaBold', $font-stack-helvetica;
+    font-size: 22px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    padding: 0 16px;
+    .old_price{
+      color: #aaa;
+      font-size: 18px;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.video_block{
+  width: 71.43%;
+}
+
+.insta_block{
+  width: 28.57%;
 }
