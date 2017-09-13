@@ -47,10 +47,115 @@
   </div>
 </header>
 <main>
-  <div class="wrap wrap_small">
-   <div class="goods_block">
-     <a href="#"></a>
+	<div class="wrap wrap_small">
+		<div class="goods_block">
+     <a href="#">Все товары</a>
+     <a href="#">Трусы</a>
+     <a class="current" href="#">Бюстье кружево</a>
+     <a href="#">Бюстье хлопок</a>
+     <a href="#">Боди</a>
+     <a href="#">Одежда для сна и отдыха</a>
+     <a href="#">Спортивная одежда</a>
+     <a href="#">Бюстгалтеры</a>
+     <a href="#">Верхняя одежда</a>
+     <a href="#">Бельевые комплекты и майки</a>
    </div>
+	</div>
+   <div id="js-filters" class="filters_block">
+   <div class="wrap wrap_small">
+    <div class="filters_block_inner">
+      <div class="col">
+      <div class="label">
+        <img src="img/icons/sort.svg" alt="">
+        Сортировка:
+      </div>
+      <div class="filter">
+          <a class="js-dropdown" href="#">По названию</a>
+          <ul class="dropdown_block">
+            <li class="radio">
+              <input id="start" type="radio" name="name" checked>
+		      <label for="start"><span></span>А-Я</label>
+            </li>
+            <li class="radio">
+              <input id="end" type="radio" name="name">
+		      <label for="end"><span></span>Я-А</label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter">
+          <a class="js-dropdown" href="#">По цене</a>
+          <ul class="dropdown_block">
+            <li class="radio">
+              <input id="expensive" type="radio" name="cost">
+		      <label for="expensive"><span></span>Сначала дорогие</label>
+            </li>
+            <li class="radio">
+              <input id="cheap" type="radio" name="cost" checked>
+		      <label for="cheap"><span></span>Сначала дешевые</label>
+            </li>
+          </ul>
+        </div>
+    </div> 
+    <div class="col">
+      <div class="label">
+        <img src="img/icons/filtres.svg" alt="">
+        Фильтры:
+      </div>
+      <div class="filter">
+          <a class="js-dropdown" href="#">Цена</a>
+          <ul class="dropdown_block">
+            <li class="input"><span>от</span><input type="text" value="50"></li>
+            <li class="input"><span>до</span><input type="text" value="360"></li>
+          </ul>
+        </div>
+        <div class="filter">
+          <a class="js-dropdown" href="#">Цвет</a>
+          <ul class="dropdown_block">
+            <li class="checkbox_color">
+              <input id="color1" type="checkbox" name="color" checked>
+		      <label for="color1"><span><img src="img/patterns/color1.png" alt=""></span></label>
+            </li>
+            <li class="checkbox_color">
+              <input id="color2" type="checkbox" name="color">
+		      <label for="color2"><span><img src="img/patterns/color2.png" alt=""></span></label>
+            </li>
+            <li class="checkbox_color">
+              <input id="color3" type="checkbox" name="color">
+		      <label for="color3"><span><img src="img/patterns/color3.png" alt=""></span></label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter">
+          <a class="js-dropdown" href="#">Стиль</a>
+          <ul class="dropdown_block">
+            <li class="checkbox">
+              <input id="style1" type="checkbox" name="style" checked>
+		      <label for="style1"><span></span>Стиль1</label>
+            </li>
+            <li class="checkbox">
+              <input id="style2" type="checkbox" name="style">
+		      <label for="style2"><span></span>Стиль2</label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter">
+          <a class="js-dropdown" href="#">Особенности</a>
+          <ul class="dropdown_block">
+             <li class="checkbox">
+              <input id="glass" type="checkbox" name="cost">
+		      <label for="glass"><span></span>Остекленная</label>
+            </li>
+            <li class="checkbox">
+              <input id="collapsible" type="checkbox" name="cost" checked>
+		      <label for="collapsible"><span></span>Складная</label>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </div>
+   </div> 
+   </div>
+   <div class="wrap wrap_small">
     <div class="row catalog_block">
       <div class="col item_product">
         <a href="#" class="inner_product">
@@ -183,6 +288,31 @@
           <div class="price">145 BYN</div>
         </a>
       </div>
+    </div>
+    <div class="pagination">
+        <ul>
+            <li class="prev"><a href="#">Предыдущая</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li class="next"><a href="#">Следующая</a></li>
+        </ul>
+    </div>
+    <div class="text_block">
+    	<div class="subtitle">Интернет-магазин  белорусского трикотажа SERGE</div>
+    	<p>Интернет-магазин SERGE предоставляет большой выбор красивого и натурального, доступного и качественного белорусского трикотажа из хлопка с доставкой по всей Беларуси. В нашем интернет-магазине можно купить красивое белье высокого качества, стильную повседневную мужскую и женскую одежду, комфортную одежду для дома, отдыха и спорта.</p>
+    	<p>Мы заботимся о наших покупателях и делаем всё возможное, чтобы совершение покупок в интернет-магазине SERGE было приятным процессом для каждого. Главные преимущества покупки в нашем интернет-магазине SERGE это:</p>
+    	<ul class="list">
+    		<li>высокое качество материалов и пошива;</li>
+    		<li>надежность доставки;</li>
+    		<li>постоянное пополнение коллекций новыми модными моделями;</li>
+    		<li>расширенный размерный ряд изделий;</li>
+    		<li>доступные цены;</li>
+    		<li>регулярное проведение акций, позволяющих купить продукцию SERGE со скидкой;</li>
+    		<li>возможность выбрать удобный для вас способ оплаты заказа.</li>
+    	</ul>
     </div>
   </div>
 </main>

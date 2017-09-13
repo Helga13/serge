@@ -75,7 +75,7 @@ label {
     vertical-align: top;
   }
   &.catalog_block{
-    margin: 26px -8px;
+    margin: 26px -8px 10px;
     .col{
       padding: 9px 8px;
     }
@@ -116,7 +116,7 @@ label {
 p {
   font-size: 16px;
   line-height: 19px;
-  margin: 22px 0;
+  margin: 10px 0;
   text-align: left;
 }
 
@@ -432,6 +432,44 @@ header .wrap_small{
   }
   .submenu{
     margin-left: 20px;
+  }
+}
+
+/* pagination */
+
+.pagination{
+  text-align: center;
+	margin-bottom: 80px;
+  li{
+    display: inline-block;
+		width: 29px;
+		height: 29px;
+		line-height: 29px;
+		text-align: center;
+    transition: color .25s ease-out;
+		&.prev,
+		&.next{
+			width: auto;
+		}
+    &.active{
+      background-color: #163e73;
+      border-radius: 50%;
+			a{
+				color: #fff;
+			}
+    }
+  }
+  a{
+    display: inline-block;
+		font-size: 16px;
+		line-height: normal;
+    color: #163e73;
+		transition: box-shadow 0.25s ease-out;
+		&:hover,
+    &:focus,
+    &:active{
+			box-shadow: inset 0px -1px 0px 0px #163e73;
+    }
   }
 }
 
@@ -844,6 +882,249 @@ main{
     width: 25%;
     .inner_product{
       height: auto;
+    }
+  }
+}
+
+.text_block{
+	margin: 18px 0;
+	.subtitle{
+		font-size: 29px;
+		line-height: normal;
+		font-family: 'ComfortaaRegular', $font-stack-helvetica;
+		padding-bottom: 32px;
+	}
+	.list{
+		li{
+			padding-left: 22px;
+			margin: 10px 0;
+		}
+	}
+}
+
+.goods_block{
+	font-size: 0;
+	text-align: center;
+	padding: 0 0 32px;
+	a{
+		display: inline-block;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.05em;
+		height: 24px;
+		color: #163e73;
+		border-radius: 7px;
+		background-color: #fff;
+		border: 1px solid #fff;
+		box-shadow: 0.5px 0.866px 5px 0px rgba(22, 62, 115, 0.118);
+		padding: 0 10px;
+		margin: 3.5px 5px;
+		transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+		&.current{
+			background-color: #163e73;
+			color: #fff;
+			box-shadow: 0;
+			border-color: #163e73;
+		}
+		&:hover,
+		&:active,
+		&:focus{
+			border-color: #163e73;
+			box-shadow: 0;
+		}
+	}
+}
+
+/* filters */
+
+.filters_block{
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
+  .filters_block_inner{
+    margin: 0 -15px;
+    font-size: 0;
+    padding: 14.5px 0;
+  }
+  .col{
+    padding: 0 15px;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+  .label{
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    font-family: 'bloggerSansMedium', $font-stack-helvetica;
+    display: inline-block;
+    margin-right: 60px;
+    img{
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .filter{
+    color: #77a841;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    display: inline-block;
+    position: relative;
+    .js-dropdown{
+      padding-right: 19px;
+      position: relative;
+      background: url(../img/icons/more.svg) right center no-repeat;
+      background-size: 10px;
+      margin-right: 29px;
+      &.active{
+        color: #527a1d;
+      }
+    }
+    .dropdown_block{
+      position: absolute;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1px 10px 0 rgba(0,0,0,.3);
+      padding: 29px 0;
+      top: 44px;
+      left: 0;
+      z-index: 1;
+      display: none;
+      padding: 24px 4px;
+      min-width: 201px;
+      font-size: 0;
+      &:before{
+        content: '';
+        position: absolute;
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 0 solid transparent;
+        top: -7px;
+        left: 16px;
+      }
+    }
+    .input{
+      display: inline-block;
+      position: relative;
+      padding: 4px 3px;
+      input{
+        padding-left: 22px;
+        color: #333;
+        width: 90px;
+      }
+      span{
+        position: absolute;
+        color: #aaa;
+        font-size: 14px;
+        left: 7px;
+        top: 12px;
+      }
+    }
+    .radio,
+    .checkbox{
+      color: #333;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+      position: relative;
+      label{
+        line-height: 26px;
+        font-size: 16px;
+      }
+    }
+    .radio{
+      span{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #bbc95b;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 6px;
+        top: 2px;
+      }
+      input[type=radio]:checked+label span::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background: #bbc95b;
+      }
+      input{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+      }
+    }
+    .checkbox{
+      span{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid  #bbc95b;
+        border-radius: 3px;
+        position: relative;
+        margin-right: 6px;
+        top: 2px;
+      }
+      input[type=checkbox]:checked+label span{
+        background-color: #bbc95b;
+      }
+      input[type=checkbox]:checked+label span::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 10px;
+        width: 10px;
+        background: url('../img/icons/check.svg') center no-repeat;
+      }
+      input{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+      }
+    }
+    .checkbox_color{
+      display: inline-block;
+      label{
+        line-height: 0;
+      }
+      span{
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 7px;
+        position: relative;
+        margin-right: 6px;
+        overflow: hidden;
+        line-height: 0;
+      }
+      input[type=checkbox]:checked+label span{
+        &:after{
+          content: '';
+          position: absolute;
+          border: 1px solid #bbc95b;
+          border-radius: 7px;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      img{
+        width: 100%;
+      }
+      input{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+      }
     }
   }
 }
