@@ -74,6 +74,12 @@ label {
     display: inline-block;
     vertical-align: top;
   }
+  &.catalog_block{
+    margin: 26px -8px;
+    .col{
+      padding: 9px 8px;
+    }
+  }
 }
 
 .btn {
@@ -166,7 +172,7 @@ header{
     display: inline-block;
     font-size: 14px;
     color: #163e73;
-    margin-left: 40px;
+    margin-left: 37px;
     img{
       width: 14px;
       height: auto;
@@ -279,6 +285,18 @@ header{
         background-color: #163e73;
       }
     }
+  }
+}
+
+header .wrap_small{
+  .logo{
+    width: 240px;
+  }
+  .header_top .item{
+    margin-left: 28px;
+  }
+  .header_top .item span{
+    padding-left: 6px;
   }
 }
 
@@ -818,5 +836,14 @@ main{
     font-family: 'ComfortaaRegular', $font-stack-helvetica;
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.catalog_block{
+  .item_product{
+    width: 25%;
+    .inner_product{
+      height: auto;
+    }
   }
 }
