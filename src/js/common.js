@@ -3,5 +3,6 @@
 //= lib/slick.min.js
 //= lib/mediaelement-and-player.min.js
 //= lib/select2.min.js
+//= lib/jquery.bxslider.min.js
 
 //= app.js

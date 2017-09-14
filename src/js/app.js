@@ -75,4 +75,10 @@ $(document).ready(function () {
     minimumResultsForSearch: Infinity 
   });
   
+  // slider on product page
+  
+  $('.bxslider').bxSlider({
+    pagerCustom: '#bx-pager'
+  });
+  
 })

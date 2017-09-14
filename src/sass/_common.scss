@@ -1114,7 +1114,7 @@ main{
         display: inline-block;
         width: 25px;
         height: 25px;
-        border-radius: 7px;
+        border-radius: 3px;
         position: relative;
         margin-right: 6px;
         overflow: hidden;
@@ -1125,7 +1125,7 @@ main{
           content: '';
           position: absolute;
           border: 1px solid #163e73;
-          border-radius: 7px;
+          border-radius: 3px;
           top: 0;
           right: 0;
           bottom: 0;
@@ -1188,11 +1188,12 @@ main{
   a{
     color: #163e73;
     position: relative;
-    transition: color 0.25s ease-out;
+    box-shadow: inset 0 -1px 0 0 #163e73;
+    transition: box-shadow 0.25s ease-out;
     &:hover,
     &:focus,
     &:active{
-      color: #444;
+      box-shadow: inset 0 -1px 0 0 transparent;
     }
     &:after{
       content: '';
@@ -1271,4 +1272,100 @@ main{
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow{
   background: url(../img/icons/svg/more_active.svg) center no-repeat;
   background-size: 10px;
+}
+
+/* product card */
+
+.photo_frame{
+  width: 50%;
+}
+
+.descr_frame{
+  width: 30%;
+}
+
+.additional_frame{
+  width: 20%;
+  text-align: center;
+  ul{
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 7px;
+    padding: 0 7px;
+  }
+  li{
+    border-bottom: 1px solid rgb(170, 170, 170);
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  a{
+    display: inline-block;
+    padding: 40px 7px 32px;
+    width: 100%;
+  }
+  .icon{
+    margin-bottom: 9px;
+  }
+  .name,
+  .add{
+    font-family: 'ComfortaaBold', $font-stack-helvetica;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    padding: 5px 0;
+  }
+  .add{
+    font-family: 'PoiretOneRegular', $font-stack-helvetica;
+  }
+}
+
+/* bxslider */
+
+.bx-wrapper{
+  border: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+
+#bx-pager{
+  a{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-right: 15px;
+    border: 1px solid #fff;
+    text-align: center;
+    transition: border-color 0.25s ease-out;
+    &.active,
+    &:hover,
+    &:focus,
+    &:active{
+      border-color: #aaa;
+    }
+  }
+  img{
+    height: 100%;
+  }
+}
+
+.bx-wrapper .bx-prev{
+  background: url('../img/icons/svg/left-black.svg') center no-repeat;
+  opacity: .4;
+  transition: opacity 0.25s ease-out;
+}
+
+.bx-wrapper .bx-next{
+  background: url('../img/icons/svg/right-black.svg') center no-repeat;
+  opacity: .4;
+  transition: opacity 0.25s ease-out;
+}
+
+.bx-wrapper .bx-next:focus, 
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-prev:focus, 
+.bx-wrapper .bx-prev:hover{
+  background-position: 0;
+  opacity: 1;
 }
