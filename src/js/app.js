@@ -58,5 +58,21 @@ $(document).ready(function () {
     body.removeClass("no-scroll");
   });
   
+   // dropdown
+  $('.js-dropdown').on('click', function (e) {
+    e.preventDefault();
+    if($(this).hasClass('active')){
+      $(this).toggleClass('active').next('.dropdown_block').slideUp(200);
+    }else{
+      $('.js-dropdown').removeClass('active').next('.dropdown_block').slideUp(100);
+      $(this).toggleClass('active').next('.dropdown_block').slideToggle(200);
+    }
+  });
+  
+  // select
+  
+  $('.js-select').select2({
+    minimumResultsForSearch: Infinity 
+  });
   
 })
