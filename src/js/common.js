@@ -4,5 +4,6 @@
 //= lib/mediaelement-and-player.min.js
 //= lib/select2.min.js
 //= lib/jquery.bxslider.min.js
+//= lib/jquery.matchHeight-min.js
 
 //= app.js
