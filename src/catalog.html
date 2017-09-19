@@ -23,11 +23,13 @@
    <div id="js-filters" class="filters_block">
    <div class="wrap wrap_small">
     <div class="filters_block_inner">
-        <div class="label">
+       <div class="filters_field js-field">
+         <div class="label">
           <img src="img/icons/svg/sort.svg" alt="">
           Сортировка:
         </div>
-        <div class="filter">
+        <div class="filters_wrap">
+          <div class="filter">
             <a class="js-dropdown" href="#">По названию</a>
             <ul class="dropdown_block">
               <li class="radio">
@@ -53,11 +55,19 @@
               </li>
             </ul>
           </div>
-        <div class="label">
+          <div class="btn_group">
+            <button type="reset">Сбросить</button>
+            <button type="button">Применить</button>
+          </div>
+        </div>
+       </div>
+        <div class="filters_field js-field">
+          <div class="label">
           <img src="img/icons/svg/filtres.svg" alt="">
           Фильтры:
         </div>
-        <div class="filter">
+        <div class="filters_wrap">
+          <div class="filter">
             <a class="js-dropdown" href="#">Цена</a>
             <ul class="dropdown_block">
               <li class="input"><span>от</span><input type="text" value="50"></li>
@@ -115,8 +125,20 @@
               </li>
             </ul>
           </div>
-          <div class="search_block">
-            <div class="search">
+          <div class="btn_group">
+            <button type="reset">Сбросить</button>
+            <button type="button">Применить</button>
+          </div>
+        </div>
+        </div>
+        
+        <div class="search_block js-field">
+           <div class="label">
+             <img src="img/icons/svg/search.svg" alt="">
+              Поиск:
+           </div>
+            <div class="search filters_wrap">
+                <p>Поиск по названию</p>
                 <form action="">
                     <input class="" name="q" type="text" placeholder="Найти">
                     <button name="s" type="submit"></button>
@@ -134,7 +156,7 @@
     </ul>
     <div class="category_title">Бюстье кружево</div>
     <div class="page_size">
-      <div class="label">Товары нас транице:</div>
+      <div class="label">Товары на странице:</div>
       <select name="" class="js-select">
         <option value="">Все</option>
         <option value="">10</option>
