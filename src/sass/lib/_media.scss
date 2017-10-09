@@ -471,6 +471,15 @@
   .additional_frame {
     margin-top: 0;
   }
+  .header_bottom .right_block li{
+    margin-left: 16px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  .footer_nav .nav_item ul{
+    display: none;
+  }
   
 }
 
@@ -670,6 +679,9 @@
     &:nth-child(n+3){
       display: none;
     }
+  }
+  .header_bottom .right_block li:nth-child(2){
+    display: none;
   }
   
 }

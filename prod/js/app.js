@@ -155,4 +155,18 @@ $(document).ready(function () {
   
 	$('.item_product').matchHeight();
   
+  if($(window).width() < 601) {
+    // media dropdown footer
+
+    $('.footer_nav .nav_item .heading').on('click', function () {
+      if($(this).hasClass('active')){
+        $(this).toggleClass('active').next('ul').slideUp(200);
+      }else{
+        $('.footer_nav .nav_item .heading').removeClass('active').next('ul').slideUp(100);
+        $(this).toggleClass('active').next('ul').slideToggle(200);
+      }
+    });
+    
+  }
+  
 })
